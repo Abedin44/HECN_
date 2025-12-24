@@ -1,0 +1,23 @@
+#!/bin/bash
+#SBATCH -J myjob           # Job name
+#SBATCH -o myjob.o%j       # Name of stdout output file
+#SBATCH -e myjob.e%j       # Name of stderr error file
+#SBATCH -p spr             # Queue (partition) name
+#SBATCH -N 1                # Total # of nodes
+#SBATCH -n 112             # Total # of mpi tasks
+#SBATCH -t 20:30:00        # Run time (hh:mm:ss)
+#SBATCH --mail-user= ""
+#SBATCH --mail-type=all    # Send email at begin and end of job
+#SBATCH -A ""    # Allocation name (req'd if you have more than 1)
+module load gcc/13.2.0
+module load mvapich/3.0
+module load intel/24.0
+module load impi/21.11
+module load qe/7.3
+
+
+#ibrun pw.x -input HECN.scf.in > HECN.scf.out
+#ibrun pw.x -input HECN.nscf.in > HECN.nscf.out
+#ibrun dos.x -input HECN.dos.in > HECN.dos.out
+#ibrun projwfc.x -input HECN.pdos.in > HECN.pdos.out
+#ibrun pp.x -input Cr.pp_rho.in > Cr.pp_rho.out

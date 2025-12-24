@@ -1,0 +1,20 @@
+&inputpp
+    prefix  = 'tmp'
+    outdir  = 'TaB',
+    filplot = 'chromiumcharge'
+    plot_num= 17,
+    spin_component=0,
+/
+&plot
+  nfile=1,
+  filepp(1)='chromiumcharge',
+  weight(1)=1.0,
+  iflag=3,
+  output_format=6,
+  fileout='cr.rho.dat'
+  e1(1)=1.0, e1(2)=0.0, e1(3)=0.0,
+  e2(1)=0.0, e2(2)=1.0, e2(3)=0.0,
+  e3(1)=0.0, e3(2)=0.0, e3(3)=1.0,
+  x0(1)=0.0, x0(2)=0.0, x0(3)=0.0,
+  nx=100, ny=100, nz=100
+/

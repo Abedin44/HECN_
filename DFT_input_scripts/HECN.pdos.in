@@ -1,0 +1,10 @@
+&projwfc
+    outdir='./TaB'
+    prefix='tmp'
+    filpdos='HECN.pdos'
+    Emin=-16,
+    Emax=35,
+    degauss = 0.007d0,
+    ngauss = 0
+    DeltaE=0.01
+ /

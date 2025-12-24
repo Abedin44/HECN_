@@ -1,0 +1,10 @@
+&dos
+    outdir='./TaB'
+    prefix='tmp'
+    fildos='HECN.dos'
+    Emin=-16,
+    Emax=35,
+    degauss = 0.007d0,
+    ngauss = 0
+    DeltaE=0.01
+ /
